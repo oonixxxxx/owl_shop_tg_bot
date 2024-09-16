@@ -28,3 +28,12 @@ async def get_menu(message: Message):
 @router.message(F.text == 'Информация о нас')
 async def get_info_about_us(message: Message):
     await message.answer(str(info_text), reply_markup=Buttons.info_button)
+    
+
+@router.message(F.text == 'Заказ')
+async def get_order(message: Message):
+    await message.answer('функция заказа', reply_markup=Buttons.order_button)
+
+@router.message(F.text == 'Оплатить')
+async def get_pay(message: Message):
+    await message.answer('функция оплаты', reply_markup=Buttons.pay_button)

@@ -1,6 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-class Buttons: 
+class Buttons:
+         
     menu_button = ReplyKeyboardMarkup(
         keyboard=[
         [KeyboardButton(text='1 choose'), KeyboardButton(text='2 choose')]

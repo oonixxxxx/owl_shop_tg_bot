@@ -1,5 +1,5 @@
 # imports
-from aiogram import F, Router, types, Bot
+from aiogram import F, Router, Bot
 
 from aiogram.filters import CommandStart
 from aiogram.types import Message
@@ -26,5 +26,5 @@ async def get_menu(message: Message):
 
 
 @router.message(F.text == 'Информация о нас')
-async def get_info(message: Message):
+async def get_info_about_us(message: Message):
     await message.answer(str(info_text), reply_markup=Buttons.info_button)
